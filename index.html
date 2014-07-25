@@ -1,92 +1,148 @@
-<!doctype html>
-<!-- The Time Machine GitHub pages theme was designed and developed by Jon Rohan, on Feb 7, 2012. -->
-<!-- Follow him for fun. http://twitter.com/jonrohan. Tail his code on http://github.com/jonrohan -->
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<style>
+@media (min-width: 640px) {
+  body {
+    width: 640px;
+    margin: 0 auto;
+  }
+}
 
-  <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen"/>
-  <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascripts/script.js"></script>
+body {
+  font-family: Baskerville, Georgia, serif;
+  font-size: 16px;
+  opacity: 0;
+  -moz-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+}
 
-  <title>Css-selector-game</title>
-  <meta name="description" content="A very simple mobile-friendly game that teaches CSS selectors.">
+body.visible {
+  opacity: 1.0;
+}
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+h1 {
+  font-weight: normal;
+  font-size: 24px;
+}
 
-</head>
+input[type="text"], #quick-keys button, code {
+  font-family: "GillSans-Light", "Gill Sans", sans-serif;
+}
 
-<body>
+body.visible input[type="text"] {
+  -moz-transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -o-transition: background-color 1s;
+}
 
-  <div class="wrapper">
-    <header>
-      <h1 class="title">Css-selector-game</h1>
-    </header>
-    <div id="container">
-      <p class="tagline">A very simple mobile-friendly game that teaches CSS selectors.</p>
-      <div id="main" role="main">
-        <div class="download-bar">
-        <div class="inner">
-          <a href="https://github.com/paularfurtado/css-selector-game/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/paularfurtado/css-selector-game/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/paularfurtado/css-selector-game" class="code">View Css-selector-game on GitHub</a>
-        </div>
-        <span class="blc"></span><span class="trc"></span>
-        </div>
-        <article class="markdown-body">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+input[type="text"] {
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 4px;
+  border: 1px dotted gray;
+  padding: 4px;
+  font-weight: 100;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+input[type="text"]:focus {
+  outline-width: 0;
+}
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+input[type="text"]:disabled {
+  background-color: lightgreen;
+  color: black;
+}
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+#quick-keys button {
+  background: white;
+  padding: 5px;
+  width: 50px;
+  font-size: 30px;
+  font-family: "Gill Sans", sans-serif;
+  font-weight: bold;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+#quick-keys button small {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: gray;
+}
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+#instructions, code#html {
+  line-height: 24px;
+}
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+#instructions code {
+  background: #f0f0f0;
+  padding: 0px 4px 0px 4px;
+}
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+code {
+  white-space: pre-wrap;
+  font-weight: 100;
+}
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+code#html {
+  display: block;
+  padding-top: 10px;
+}
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+code#html .highlight {
+  -moz-transition: background-color 1s;
+  -webkit-transition: background-color 1s;
+  -o-transition: background-color 1s;
+}
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+code#html .highlight.visible {
+  background-color: rgba(255, 255, 0, 0.4);
+}
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </article>
-      </div>
-    </div>
-    <footer>
-      <div class="owner">
-      <p><a href="https://github.com/paularfurtado" class="avatar"><img src="https://avatars3.githubusercontent.com/u/3427567?s=60" width="48" height="48"/></a> <a href="https://github.com/paularfurtado">paularfurtado</a> maintains <a href="https://github.com/paularfurtado/css-selector-game">Css-selector-game</a></p>
-
-
-      </div>
-      <div class="creds">
-        <small>This page generated using <a href="http://pages.github.com/">GitHub Pages</a><br/>theme by <a href="https://twitter.com/jonrohan/">Jon Rohan</a></small>
-      </div>
-    </footer>
-  </div>
-  <div class="current-section">
-    <a href="#top">Scroll to top</a>
-    <a href="https://github.com/paularfurtado/css-selector-game/tarball/master" class="tar">tar</a><a href="https://github.com/paularfurtado/css-selector-game/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
-    <p class="name"></p>
-  </div>
-
-  
-</body>
-</html>
+a {
+  color: inherit;
+}
+</style>
+<title>CSS Leveler</title>
+<h1>Level <span class="level-number"></span></h1>
+<div id="instructions"></div>
+<div id="quick-keys" style="display: none">
+  <button>#<small>id</small></button>
+  <button>.<small>class</small></button>
+  <button>,<small>and</small></button>
+  <button>&gt;<small>child</small></button>
+  <button>*<small>any</small></button>
+  <button>+<small>sibling</small></button>
+  <button>:<small>pseudo</small></button>
+</div>
+<input type="text" autocorrect="off" autocomplete="off" autocapitalize="off"
+       placeholder="type a CSS selector here">
+<code id="html"></code>
+<div id="level-not-found" style="display: none">
+  <p>Hmm, this level doesn’t seem to exist. You may have reached the
+    end of the game.</p>
+  <p>If you’d like to see more levels, please tweet
+    <a href="http://twitter.com/toolness">@toolness</a>. Or
+    <a href="https://github.com/toolness/css-selector-game">fork
+      the code</a> and add your own levels!</p>
+</div>
+<div id="level-load-error" style="display: none">
+  <p>Hmm, something went awry when trying to load this level.</p>
+  <p>Please try again later.</p>
+</div>
+<script>
+document.write(
+  '<script src=' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') + '.min.js><\/script>'
+  );
+</script>
+<script src="slowparse.min.js"></script>
+<script src="main.js"></script>
