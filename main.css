@@ -1,0 +1,112 @@
+@media (min-width: 640px) {
+    body {
+      width: 640px;
+      margin: 0 auto;
+    }
+  }
+  
+  body {
+    font-family: Baskerville, Georgia, serif;
+    font-size: 16px;
+    opacity: 0;
+    -moz-transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+  }
+  
+  body.visible {
+    opacity: 1.0;
+  }
+  
+  h1 {
+    font-weight: normal;
+    font-size: 24px;
+  }
+  
+  input[type="text"], #quick-keys button, code {
+    font-family: "GillSans-Light", "Gill Sans", sans-serif;
+  }
+  
+  body.visible input[type="text"] {
+    -moz-transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+  }
+  
+  .container {
+    margin-top: 60px;
+  }
+
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    margin-top: 4px;
+    border: 1px dotted gray;
+    padding: 4px;
+    font-weight: 100;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus {
+    outline-width: 0;
+  }
+  
+  input[type="text"]:disabled {
+    background-color: lightgreen;
+    color: black;
+  }
+  
+  #quick-keys button {
+    background: white;
+    padding: 5px;
+    width: 50px;
+    font-size: 30px;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #quick-keys button small {
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    color: gray;
+  }
+  
+  #instructions, code#html {
+    line-height: 24px;
+  }
+  
+  #instructions code {
+    background: #f0f0f0;
+    padding: 0px 4px 0px 4px;
+  }
+  
+  code {
+    white-space: pre-wrap;
+    font-weight: 100;
+  }
+  
+  code#html {
+    display: block;
+    padding-top: 10px;
+  }
+  
+  code#html .highlight {
+    -moz-transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+  }
+  
+  code#html .highlight.visible {
+    background-color: rgba(255, 255, 0, 0.4);
+  }
+  
+  a {
+    color: inherit;
+  }
